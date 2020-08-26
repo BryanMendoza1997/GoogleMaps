@@ -1,6 +1,7 @@
 package com.example.googlemaps.Fragment;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,6 +77,18 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
         Gmap.setMaxZoomPreference(20);
         CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(17).bearing(5).build();
         Gmap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        PolylineOptions lineas = new PolylineOptions()
+                .add(new LatLng(-1.0119506476027027, -79.4718605423586))
+                .add(new LatLng(-1.013420268178777, -79.47187068830428))
+                .add(new LatLng(-1.0134953584198172, -79.46954789534065))
+                .add(new LatLng(-1.0136240843202842, -79.46704807651781))
+                .add(new LatLng(-1.0123046439858001, -79.46699501516007))
+                .add(new LatLng(-1.0119506476027027, -79.4718605423586))
+                ;
+        lineas.width(5);
+        lineas.color(Color.GREEN);
+        Gmap.addPolyline(lineas);
+
         //Evento al dar click
         Gmap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
