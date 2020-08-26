@@ -88,6 +88,26 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
         lineas.width(5);
         lineas.color(Color.GREEN);
         Gmap.addPolyline(lineas);
+        LatLng puntos = new LatLng(-1.012965, -79.469983);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Comedor").draggable(false));
+        puntos = new LatLng(-1.012688, -79.470601);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Ciencias de la Ingeniería").draggable(false));
+        puntos = new LatLng(-1.012713, -79.471046);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title(" Facultad de Ambientales").draggable(false));
+        puntos = new LatLng(-1.012910, -79.469470);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Ciencias Agrarias").draggable(false));
+        puntos = new LatLng(-1.012233,  -79.470126);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Empresariales").draggable(false));
+        puntos = new LatLng(-1.012949,  -79.467712);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Auditorio").draggable(false));
+        puntos = new LatLng(-1.013007,  -79.468734);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Unidad de Posgrado").draggable(false));
+        puntos = new LatLng(-1.012959, -79.470560);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Rectorado").draggable(false));
+        puntos = new LatLng(-1.012217, -79.469647);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Instituto de Informática").draggable(false));
+        puntos = new LatLng(-1.012246, -79.469186);
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Bienestar Estudiantil").draggable(false));
 
         //Evento al dar click
         Gmap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
