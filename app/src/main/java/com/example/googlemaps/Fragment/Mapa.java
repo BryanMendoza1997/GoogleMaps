@@ -55,7 +55,6 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
        context=vista.getContext();
         return vista;
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -66,7 +65,6 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
             mapView.getMapAsync(this);
         }
     }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Gmap = googleMap;
@@ -83,8 +81,7 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
                 .add(new LatLng(-1.0134953584198172, -79.46954789534065))
                 .add(new LatLng(-1.0136240843202842, -79.46704807651781))
                 .add(new LatLng(-1.0123046439858001, -79.46699501516007))
-                .add(new LatLng(-1.0119506476027027, -79.4718605423586))
-                ;
+                .add(new LatLng(-1.0119506476027027, -79.4718605423586));
         lineas.width(5);
         lineas.color(Color.GREEN);
         Gmap.addPolyline(lineas);
@@ -93,7 +90,7 @@ public class Mapa extends Fragment implements OnMapReadyCallback, CuadroDialogo.
         puntos = new LatLng(-1.012688, -79.470601);
         Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Ciencias de la Ingeniería").draggable(false));
         puntos = new LatLng(-1.012713, -79.471046);
-        Gmap.addMarker(new MarkerOptions().position(puntos).title(" Facultad de Ambientales").draggable(false));
+        Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Ambientales").draggable(false));
         puntos = new LatLng(-1.012910, -79.469470);
         Gmap.addMarker(new MarkerOptions().position(puntos).title("Facultad de Ciencias Agrarias").draggable(false));
         puntos = new LatLng(-1.012233,  -79.470126);
